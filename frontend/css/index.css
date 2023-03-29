@@ -1,0 +1,44 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+/* Navbar */
+/* First Fixed Navbar */
+#projectNavbar {
+  position: fixed;
+  width: 100%;
+  z-index: 40;
+  background: white;
+}
+.navbarUpLinks {
+  width: 94%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  /* grid-template-columns: 70% 30%; */
+  font-size: 12px;
+  padding: 11px;
+}
+.navbarUpLinks a {
+  display: inline;
+  /* font-weight: 600; */
+  color: #5e5c5d;
+}
+.navbarUpLinks a:hover {
+  text-decoration: underline;
+}
+.contactUs {
+  text-align: right;
+}
+.contactUs p {
+  margin-top: 0;
+}
+
+/* Mid Navbar */
