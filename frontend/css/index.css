@@ -285,20 +285,28 @@ div.category {
 #kidSection h3 {
   text-align: center;
 }
+
 .solutions img {
   width: 47%;
   display: inline-block;
 }
+
 .states {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-a .bookapt {
+
+.solutions img {
+  width: 47%;
+  display: inline-block;
+}
+a.bookapt {
   padding: 15px;
   border: none;
   color: white;
 }
 /* NAV BAR Box Dropdown ON HOVER STYLES ENDED  HERE */
+
 
 /* Verity First Div  start*/
 .first_div {

@@ -27,25 +27,40 @@ const nextBtn = document.getElementById("nextBtn");
 let slideIndex = 0;
 
 function showSlide(n) {
+
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
   slideIndex = (n + slides.length) % slides.length;
+
+  // hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  // set slideIndex within bounds
+  slideIndex = (n + slides.length) % slides.length;
+
+  // show current slide
+
   slides[slideIndex].classList.add("active");
 }
 
 function nextSlide() {
   showSlide(slideIndex + 1);
 }
+
 function prevSlide() {
   showSlide(slideIndex - 1);
 }
+
 // show first slide initially
 showSlide(slideIndex);
 
 // handle next and prev button clicks
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
+
 
 setInterval(nextSlide, 3000);
 // .............Slide Show End.....................................//
@@ -57,6 +72,12 @@ if (token == "") {
 } else {
   // fetch()
 }
+
+// set interval for auto slideshow
+setInterval(nextSlide, 3000);
+
+// .............Slide Show End.....................................//
+
 
 // Eyeglasses Corousel.........................//
 

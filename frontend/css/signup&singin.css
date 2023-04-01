@@ -107,6 +107,16 @@ img {
   border-top-left-radius: 39%;
   border-top-right-radius: 39%;
 }
+
+
+/* #loginformData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+} */
+
 .wrongBtn {
   color: black;
   position: absolute;
