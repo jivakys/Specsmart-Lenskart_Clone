@@ -27,6 +27,12 @@ const nextBtn = document.getElementById("nextBtn");
 let slideIndex = 0;
 
 function showSlide(n) {
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+  slideIndex = (n + slides.length) % slides.length;
+
   // hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
@@ -36,6 +42,7 @@ function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
 
   // show current slide
+
   slides[slideIndex].classList.add("active");
 }
 
@@ -54,10 +61,23 @@ showSlide(slideIndex);
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
+
+setInterval(nextSlide, 3000);
+// .............Slide Show End.....................................//
+
+// SignUp Name Change //
+let signBtn_Name = document.getElementById("inOut");
+if (token == "") {
+  signBtn_Name.innerText = "Sign In & Sign Up";
+} else {
+  // fetch()
+}
+
 // set interval for auto slideshow
 setInterval(nextSlide, 3000);
 
 // .............Slide Show End.....................................//
+
 
 // Eyeglasses Corousel.........................//
 

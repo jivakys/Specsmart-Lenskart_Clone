@@ -108,6 +108,7 @@ img {
   border-top-right-radius: 39%;
 }
 
+
 /* #loginformData {
   display: flex;
   flex-direction: column;
@@ -126,6 +127,19 @@ img {
   border-radius: 50%;
   text-align: center;
   font-size: 25px;
+  z-index: 10;
+}
+#back,
+#loginBack {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: white;
+  text-align: center;
+  font-size: 28px;
+  right: 10px;
+  top: 13px;
 }
 #login_Submit {
   border-radius: 5px;

@@ -61,9 +61,13 @@ const onLogin = () => {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-      localStorage.setItem("token", res.token);
-      alert("Login Successfully!...");
-      window.location.href = "index.html";
+      if (res.status === 200) {
+        localStorage.setItem("token", res.token);
+        alert("Login Successfully!...");
+        window.location.href = "index.html";
+      } else {
+        alert("ckeck your email password");
+      }
     })
     .catch((err) => {
       console.log(err);
@@ -85,5 +89,10 @@ goToSignin.addEventListener("click", () => {
 
 let backbtn = document.getElementById("back");
 backbtn.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+let logBackbtn = document.getElementById("loginBack");
+logBackbtn.addEventListener("click", () => {
   window.location.href = "index.html";
 });
