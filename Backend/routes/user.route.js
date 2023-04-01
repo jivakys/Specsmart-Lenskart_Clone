@@ -46,4 +46,21 @@ userRoute.post("/login", async (req, res) => {
   }
 });
 
+userRoute.get("/name", async (req, res) => {
+  const { email } = req.body;
+  try {
+    let user = await UserModel.findOne({ email });
+    if (user) {
+      console.log(user.firstname, user.lastname, user.email);
+      res.status(200).send({
+        token: jwt.sign({ userId: user._id }, "jivak"),
+      });
+    } else {
+      res.status(400).send({ err: "Wrong email" });
+    }
+  } catch (err) {
+    res.status(400).send({ msg: err.message });
+  }
+});
+
 module.exports = { userRoute };

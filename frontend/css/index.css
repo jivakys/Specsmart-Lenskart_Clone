@@ -13,6 +13,7 @@ a {
 /* First Fixed Navbar */
 #projectNavbar {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 40;
   background: white;
@@ -42,3 +43,750 @@ a {
 }
 
 /* Mid Navbar */
+#midNavbar {
+  width: 94%;
+  margin: auto;
+  height: 60px;
+  display: flex;
+}
+.specsLogo {
+  display: flex;
+}
+.specsLogo img {
+  width: 15vw;
+  height: 3vw;
+}
+#contactNum {
+  width: 9vw;
+  height: 3vw;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 60%;
+}
+.searchBar input {
+  margin-left: 30px;
+  width: 100%;
+  height: 31px;
+  padding-left: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+}
+.signInLinks {
+  width: 40%;
+  text-align: end;
+}
+.signInLinks a {
+  color: #6e5a64;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+  font-size: 15px;
+  display: inline;
+  position: relative;
+  top: 25%;
+}
+
+/* category Navbar */
+#category_container {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  background-color: #f2f2ed;
+}
+.allCategorybox {
+  display: flex;
+  justify-content: space-between;
+  width: 94%;
+  margin: 0px auto;
+}
+.categories {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+.categories li {
+  display: inline-block;
+}
+.categoryName {
+  padding: 13px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+}
+li.categoryName:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border-bottom: 3px solid black;
+  height: 25px;
+  /* display: block; */
+}
+#category_img {
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#category_img > img {
+  width: 32%;
+  border-radius: 5px;
+}
+/* Navbar End */
+
+.boxDropdown {
+  width: 100%;
+  position: absolute;
+  left: 93px;
+  top: 69%;
+  display: none;
+  z-index: 10;
+  background: rgb(209, 209, 209);
+  font-size: 14px;
+  font-weight: 300;
+}
+/* .boxDropdown {
+  display: block;
+} */
+.boxDropdown > div {
+  width: 90%;
+  display: flex;
+  background: white;
+  position: absolute;
+  z-index: 10;
+  box-shadow: 0 0 10px #6e5a64;
+  left: -40px;
+  top: 47px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px;
+}
+.boxDropdown div.contactLenses div {
+  width: 230px;
+  height: 400px;
+}
+.storeLocator {
+  width: 100% !important;
+}
+.storeLocator div:nth-child(2) {
+  width: 40% !important;
+}
+.boxDropdown div.eyetest div,
+.boxDropdown div.tryathome div {
+  width: 550px;
+  height: 330px;
+}
+.pic img {
+  margin: 30px;
+}
+.boxDropdown div.eyeglasses div {
+  width: 175px;
+  height: 330px;
+}
+.boxDropdown div.eyeglasses div.category,
+div.gender {
+  width: 200px !important;
+}
+.boxDropdown div.eyeglasses div.category ul,
+div.gender ul {
+  margin-left: -16px;
+}
+.boxDropdown div.eyeglasses,
+div.gender li {
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.boxDropdown div.eyeglasses div.category li {
+  font-family: "Poppins", sans-serif;
+  padding: 14px;
+}
+.category li strong {
+  margin-left: 5px;
+  font-family: "Poppins", sans-serif;
+}
+.boxDropdown div.eyeglasses div.category li img,
+div.gender li img {
+  margin-left: 40px;
+  width: 40px;
+}
+.boxDropdown div.eyeglasses div.category li:hover,
+div.gender li:hover {
+  background: #dcdbd4;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+li label {
+  margin-left: 15px;
+  font-family: "Poppins", sans-serif;
+}
+h3,
+h4 {
+  font-family: "Poppins", sans-serif;
+}
+
+.boxDropdown > div.eyeglasses > div > h4 {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+  color: black;
+}
+.boxDropdown div.eyeglasses div.gender,
+div.category {
+  border-right: 1px solid #ededed;
+}
+.boxDropdown ul.list li {
+  padding: 10px;
+  font-size: x-small;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.boxDropdown ul.list li:hover {
+  font-weight: 900;
+  font-size: small;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+.boxDropdown ul.list li:hover::after {
+  content: " >";
+}
+#kidSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  /* width: 175px; */
+  height: 330px;
+}
+#kidSection .kiddo {
+  width: 250px;
+  height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2ed;
+  border: 1px solid rgb(203, 199, 199);
+  border-radius: 5px;
+}
+#kidSection .kidImg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#kidSection h3 {
+  text-align: center;
+}
+.solutions img {
+  width: 47%;
+  display: inline-block;
+}
+.states {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+a .bookapt {
+  padding: 15px;
+  border: none;
+  color: white;
+}
+/* NAV BAR Box Dropdown ON HOVER STYLES ENDED  HERE */
+
+/* Verity First Div  start*/
+.first_div {
+  padding-top: 160px;
+  padding-bottom: 10px;
+  display: flex;
+  width: 100%;
+  background-color: #f7f5f5;
+}
+.producttypes {
+  width: 94%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.verity {
+  width: 16%;
+  height: 160px;
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.verity:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.glassImgDiv {
+  width: 95%;
+  padding: 5px;
+  height: 75%;
+  margin: auto;
+}
+.glassImgDiv img {
+  width: 100%;
+  height: 100%;
+}
+.glassNameDiv {
+  text-align: center;
+  font-size: 13px;
+}
+/* First Div end */
+
+/* slidShow */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+
+.slide {
+  display: none;
+}
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+.slide.active {
+  display: block;
+}
+#prevBtn,
+#nextBtn {
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  border: none;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+#prevBtn {
+  left: 10px;
+}
+#nextBtn {
+  right: 10px;
+}
+/* Slide show End */
+
+/* MemberShip div  purpose div*/
+.membership {
+  width: 100%;
+  height: 400px;
+  margin-top: 25px;
+}
+.membership img {
+  width: 100%;
+  height: 100%;
+}
+.purpose {
+  width: 100%;
+  height: 250px;
+}
+/* end................ */
+
+/* AS SEEN ON SHARK TANK ******************************************/
+.as-seen-on-shark-tank {
+  margin-top: 80px;
+  margin-bottom: 20px;
+}
+.as-seen-on-shark-tank > div > img {
+  width: 100%;
+}
+.as-seen-on-shark-tank > div:nth-child(1) {
+  width: 95%;
+  margin: auto;
+}
+
+/* AS SEEN ON KARAN ***********************************/
+.as-seen-on-karan {
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+.as-seen-on-karan > div > img {
+  width: 100%;
+}
+.as-seen-on-karan > div:nth-child(1) {
+  width: 95%;
+  margin: auto;
+}
+
+/* TRENDING GLASSES ********************************************/
+.trending-sunglasses {
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+.trending-sunglasses > div > img {
+  width: 100%;
+}
+.trending-sunglasses > div:nth-child(1) {
+  width: 95%;
+  margin: auto;
+}
+.trending-sunglasses > div:nth-child(2) {
+  margin-top: 30px;
+}
+
+/* FIRST SLIDER***************************** */
+.slider {
+  margin-top: 50px;
+}
+.slider img {
+  width: 100%;
+}
+
+/* GLAM UP ***************************************/
+.glam-up {
+  margin-top: 75px;
+  margin-bottom: 20px;
+}
+.glam-up > div > img {
+  width: 100%;
+}
+.glam-up > div:nth-child(1) {
+  width: 95%;
+  margin: auto;
+}
+.glam-up > div:nth-child(2) {
+  margin-top: 30px;
+}
+
+/* BUY IT YOUR WAY************************* */
+.buy-it img {
+  width: 100%;
+}
+.buy-your {
+  display: grid;
+  width: 95%;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  gap: 12px 15px;
+  margin-top: 30px;
+}
+.buy-it {
+  margin-top: 75px;
+}
+.first-img {
+  width: 95%;
+  margin: auto;
+}
+
+/*  eyeglasss corousel.......... */
+.corousel {
+  width: 100%;
+}
+.corousel_heading {
+  width: 80%;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+.corousel_heading h3 {
+  font-size: 22px;
+}
+.slideshow_container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.eye_slideshow {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 180px;
+}
+
+.eye_slideshow img {
+  width: 34%;
+  height: 95%;
+}
+
+.previous,
+.nextt {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.nextt {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous:hover,
+.nextt:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .......... sunglasses corousel............ */
+.sun_slideshow {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 180px;
+}
+
+.sun_slideshow img {
+  width: 34%;
+  height: 95%;
+}
+
+.previous1,
+.nextt1 {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.nextt1 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous1:hover,
+.nextt1:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*.......... SINGLE Image Divs ...........*/
+.singleImgDiv {
+  width: 100%;
+  margin-top: 35px;
+}
+.singleImgDiv img {
+  width: 100%;
+  height: 280px;
+}
+
+/* ....... WITH POWER COMPUTER BLU LENSES corousel ...... */
+.blu_slideshow {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 180px;
+}
+
+.blu_slideshow img {
+  width: 34%;
+  height: 95%;
+}
+
+.previous2,
+.nextt2 {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.nextt2 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous2:hover,
+.nextt2:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* ....... WITH ZERO POWER COMPUTER BLU LENSES corousel ...... */
+.zero_slideshow {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 180px;
+}
+
+.zero_slideshow img {
+  width: 34%;
+  height: 95%;
+}
+
+.previous3,
+.nextt3 {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.nextt3 {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.previous3:hover,
+.nextt3:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*.......... LAST Image Divs ...........*/
+.lastImg {
+  width: 100%;
+  margin-top: 35px;
+}
+.lastImg img {
+  width: 100%;
+  height: 100px;
+}
+
+/* .......... FOOTER ........................ */
+
+footer {
+  width: 100%;
+  background-color: #000042;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+#footerDiv {
+  width: 90%;
+  margin: auto;
+}
+.f1 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.f1 h1 {
+  margin-bottom: 20px;
+}
+.lensInfo {
+  display: flex;
+  flex-direction: column;
+}
+.lensInfo p {
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+.lensInfo p label {
+  font-size: 14px;
+  color: teal;
+}
+.f2 {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.allProdt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
+.allProdt :nth-child(2) {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: white;
+  border: 1px solid white;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+.f3 {
+  width: 100%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-bottom: 1px solid white;
+}
+.d1 {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+.allInfoLinks h3,
+ul li {
+  display: block;
+  margin-bottom: 7px;
+}
+.allInfoLinks h3 {
+  font-size: 20px;
+}
+ul li {
+  font-size: 12px;
+}
+.d2 {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.psIn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.psIn p {
+  font-size: 13px;
+}
+.f4 {
+  width: 100%;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.tc {
+  display: flex;
+}
+.tc h4 {
+  margin-right: 11px;
+  font-size: 13px;
+}
+.follow {
+  display: flex;
+  align-items: center;
+}
+.follow i {
+  margin-left: 15px;
+  font-size: 20px;
+}
