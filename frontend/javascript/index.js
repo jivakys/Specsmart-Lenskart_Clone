@@ -80,7 +80,6 @@ function signOut() {
 // SignUp Name Change //
 let signBtn_Name = document.getElementById("inOut");
 let firstname = localStorage.getItem("firstname");
-// console.log(firstname);
 if (localStorage.getItem("token").length > 10) {
   signBtn_Name.innerText = firstname;
 } else {
@@ -202,7 +201,6 @@ suncorousel_nextBtn.addEventListener("click", () => {
 });
 
 //  ..............  Power blu lenses ..................... //
-
 let lenses_slideIndex = 0;
 const lenses_slides = document.querySelectorAll(".blu_slideshow img");
 const lenses_prevBtn = document.querySelector(".previous2");
