@@ -35,6 +35,7 @@ userRoute.post("/login", async (req, res) => {
           res.status(200).send({
             msg: "Login Successfully",
             token: jwt.sign({ userId: user._id }, "jivak"),
+            firstname: user.firstname,
           });
         } else {
           res.status(400).send({ err: "Wrong Credential" });

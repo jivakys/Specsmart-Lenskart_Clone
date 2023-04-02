@@ -27,12 +27,10 @@ const nextBtn = document.getElementById("nextBtn");
 let slideIndex = 0;
 
 function showSlide(n) {
-
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
   slideIndex = (n + slides.length) % slides.length;
-
   // hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
@@ -42,7 +40,6 @@ function showSlide(n) {
   slideIndex = (n + slides.length) % slides.length;
 
   // show current slide
-
   slides[slideIndex].classList.add("active");
 }
 
@@ -50,6 +47,63 @@ function nextSlide() {
   showSlide(slideIndex + 1);
 }
 
+function prevSlide() {
+  showSlide(slideIndex - 1);
+}
+// show first slide initially
+showSlide(slideIndex);
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+setInterval(nextSlide, 3000);
+// .............Slide Show End.....................................//
+
+// log in or not check
+let myinOut = document.getElementById("inOut");
+myinOut.addEventListener("click", () => {
+  console.log("button click...");
+  checkLoginOrNot();
+});
+
+function checkLoginOrNot() {
+  if (localStorage.getItem("token").length > 10) {
+    console.log("if run...");
+    const myDiv = document.getElementById("signout");
+    console.log("myDiv =", myDiv);
+    myDiv.style.visibility = "visible";
+  } else {
+    console.log("else run...");
+    window.location.href = "../html/signup.html";
+    // debugger;
+  }
+}
+
+function signOut() {
+  const myDiv = document.getElementById("signout");
+  console.log("sign out work");
+  localStorage.setItem("token", "");
+  localStorage.setItem("firstname", "");
+  myDiv.style.visibility = "hidden";
+  location.reload();
+}
+
+// SignUp Name Change //
+let signBtn_Name = document.getElementById("inOut");
+let firstname = localStorage.getItem("firstname");
+if (localStorage.getItem("token").length > 10) {
+  signBtn_Name.innerText = firstname;
+} else {
+  signBtn_Name.innerText = "Sign In & Sign up";
+}
+
+function goToProduct() {
+  if (localStorage.getItem("token").length > 10) {
+    window.location.href = "product.html";
+  } else {
+    alert("Please Login First");
+    window.location.href = "signup.html";
+  }
+}
 function prevSlide() {
   showSlide(slideIndex - 1);
 }
@@ -77,7 +131,6 @@ if (token == "") {
 setInterval(nextSlide, 3000);
 
 // .............Slide Show End.....................................//
-
 
 // Eyeglasses Corousel.........................//
 

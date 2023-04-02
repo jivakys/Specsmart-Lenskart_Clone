@@ -12,6 +12,9 @@ body {
 #signup_div {
   width: 100%;
   position: relative;
+  /* background-image: url("https://static5.lenskart.com/media/catalog/product/pro/1/thumbnail/480x480/9df78eab33525d08d6e5fb8d27136e95//v/i/gold-blue-gradient-full-rim-aviator-vincent-chase-polarized-vintage-vc-s11075-c12-sunglasses_g_3383_6_02_22.jpg");
+  background-size: cover; */
+  /* opacity: 0.7; */
 }
 #signUpForm {
   position: absolute;
@@ -107,7 +110,6 @@ img {
   border-top-left-radius: 39%;
   border-top-right-radius: 39%;
 }
-
 
 /* #loginformData {
   display: flex;

@@ -1,6 +1,8 @@
 // REGISTER USER //
 
-let url = `http://localhost:9900/users/register`;
+let url = `https://kind-ruby-marlin-wrap.cyclic.app/users/register`;
+//let url = `http://localhost:9900/users/register`;
+
 let form = document.getElementById("form");
 let signUpForm = document.getElementById("signUpForm");
 let loginForm = document.getElementById("loginForm");
@@ -51,7 +53,8 @@ const onLogin = () => {
     email: document.getElementById("login_email").value,
     password: document.getElementById("login_password").value,
   };
-  fetch(`http://localhost:9900/users/login`, {
+
+  fetch(`https://kind-ruby-marlin-wrap.cyclic.app/users/login`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -60,14 +63,13 @@ const onLogin = () => {
   })
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
-      if (res.status === 200) {
-        localStorage.setItem("token", res.token);
-        alert("Login Successfully!...");
-        window.location.href = "index.html";
-      } else {
-        alert("ckeck your email password");
-      }
+
+      // console.log("res=", res.token, res);
+      localStorage.setItem("token", JSON.stringify(res.token));
+      localStorage.setItem("firstname", res.firstname);
+      alert("Login Successfully!...");
+      window.location.href = "index.html";
+
     })
     .catch((err) => {
       console.log(err);

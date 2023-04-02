@@ -92,6 +92,25 @@ a {
   top: 25%;
 }
 
+#signout {
+  height: 15px;
+  font-size: 10px;
+  display: block;
+  position: absolute;
+  top: 72px;
+  right: 270px;
+  border: 1px solid blue;
+  padding: 2px;
+  /* display:; */
+  visibility: hidden;
+}
+#inOut {
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  top: 49px;
+  right: 275px;
+}
+
 /* category Navbar */
 #category_container {
   display: flex;
@@ -285,12 +304,10 @@ div.category {
 #kidSection h3 {
   text-align: center;
 }
-
 .solutions img {
   width: 47%;
   display: inline-block;
 }
-
 .states {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -306,7 +323,6 @@ a.bookapt {
   color: white;
 }
 /* NAV BAR Box Dropdown ON HOVER STYLES ENDED  HERE */
-
 
 /* Verity First Div  start*/
 .first_div {

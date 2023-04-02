@@ -1,5 +1,8 @@
-let url = `http://localhost:9900/products/`;
+
+let url = `https://kind-ruby-marlin-wrap.cyclic.app/products/`;
+// let url = `http://localhost:9900/products/`;
 // let url = `http://localhost:9900/products/sorting?sort=hightolow`;
+
 
 let postData = document.getElementById("results");
 let totalProductList = document.getElementById("totalPro");
@@ -8,7 +11,7 @@ function getproduct(url) {
     method: "GET",
     headers: {
       "Content-type": "application/json",
-      //    authorization: localStorage.getItem("token"),
+      authorization: localStorage.getItem("token"),
     },
   })
     .then((res) => res.json())
@@ -26,11 +29,20 @@ getproduct(url);
 
 function getFilterproduct(filterBy, byValue) {
   console.log(filterBy, byValue);
+
+  getproduct(
+    `https://kind-ruby-marlin-wrap.cyclic.app/products/model?${filterBy}=${byValue}`
+  );
+
   getproduct(`http://localhost:9900/products/model?${filterBy}=${byValue}`);
 }
 
 function getSortProduct(byValue) {
   console.log(byValue);
+
+  getproduct(
+    `https://kind-ruby-marlin-wrap.cyclic.app/products/sorting?sort=${byValue}`
+  );
   getproduct(`http://localhost:9900/products/sorting?sort=${byValue}`);
 }
 
