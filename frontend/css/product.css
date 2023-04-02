@@ -1,0 +1,281 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+div.content {
+  position: relative;
+  top: 225px;
+}
+.top_Div {
+  position: fixed;
+  display: flex;
+  width: 100%;
+}
+.top_Div img {
+  width: 100%;
+  height: 100px;
+}
+select {
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+select option {
+  font-weight: bold;
+}
+.content div.flexbox {
+  display: flex;
+  margin-top: -75px;
+  width: 100%;
+}
+.filters {
+  border: 1px solid #ededed;
+  width: 22%;
+  height: 700px;
+  overflow: scroll;
+  color: #5a5a5a;
+  position: fixed;
+  padding-top: 10px;
+}
+div.filters h3 {
+  color: #262525;
+  margin-left: 20px;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+div.filters div.frame-type,
+div.filters div.frame-shape {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 15px;
+}
+div.filters div.frame-type div,
+div.filters div.frame-shape div {
+  padding: 2px;
+  width: 70px;
+  height: 70px;
+  border: 1px solid #ededed;
+  font-size: small;
+}
+div.filters div.frame-type img,
+div.filters div.frame-shape img {
+  width: 58px;
+  height: 31px;
+}
+div.filters div.frame-type div:hover,
+div.filters div.frame-shape div:hover {
+  border: 1px solid #6aeff8;
+  cursor: pointer;
+}
+div.glasses {
+  width: 78%;
+  left: 22%;
+  position: relative;
+  background: white;
+}
+.sectionHeading {
+  display: flex;
+  width: 100%;
+  background: #ededed;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  /* padding-left: 20px; */
+}
+div.sectionHeading div {
+  width: 33%;
+  font-family: "Poppins", sans-serif;
+  color: #5a5a5a;
+}
+.showing {
+  font-size: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: gray;
+}
+#totalPro {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: black;
+}
+div.filters div.colors {
+  margin-left: 20px;
+  height: 200px;
+  overflow: scroll;
+}
+div.sectionHeading div * {
+  margin: 4px;
+}
+div.filters div.menus {
+  font-size: small;
+  font-weight: bolder;
+}
+div.filters div.menus div {
+  padding: 25px 5px;
+  border-bottom: 1px solid #cecece;
+}
+div.filters div.menus img {
+  float: right;
+}
+div.filters div.menus div:nth-child(1) {
+  border-top: 1px solid #cecece;
+}
+div.filters div.menus div:hover {
+  cursor: pointer;
+}
+div.filters div.menus div:active {
+  border-top: 5px solid #cecece;
+}
+p.showing {
+  width: 150px;
+  margin: 10px auto;
+  font-size: small;
+}
+#results {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+#results .card {
+  width: 90%;
+  height: 340px;
+  margin: 15px;
+  transition: 0.2s all ease;
+  position: relative;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+}
+#results > div:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+  box-shadow: 0 0 8px lightgrey;
+}
+.card > div {
+  width: 90%;
+  margin: auto;
+}
+.card img {
+  width: 95%;
+  height: 170px;
+}
+#results h4 {
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.rating-det {
+  width: 60px;
+  height: 25px;
+  border-radius: 15%;
+  text-align: center;
+  background-color: #f2f2ed;
+}
+.rating-det p {
+  font-family: "Poppins", sans-serif;
+  padding: 1px;
+  font-weight: bold;
+}
+.card-info {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.shape {
+  color: #b59a50;
+  font-weight: 900;
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.pOffer {
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(90deg, #f7f1de 20%, rgba(247, 241, 222, 0) 100%);
+  border-bottom-left-radius: 8px;
+  margin-left: 15px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.offer_1 {
+  color: #b59a50;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  font-family: sans-serif;
+  padding: 7px;
+}
+.addToCart {
+  color: #b59a50;
+  font-weight: 700;
+  font-size: 13px;
+  font-family: "Poppins", sans-serif;
+  display: block;
+  width: 95px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  background-color: #fcf1d2;
+}
+footer > div {
+  margin: 20px auto;
+  text-align: center;
+}
+div.sns img {
+  margin-left: 20px;
+}
+footer div:nth-child(3) a {
+  color: #12afd6;
+}
+footer a {
+  color: #6e5a64;
+}
+footer div.navbar {
+  text-align: left;
+  border-top: 2px solid #b6b6b6;
+  border-bottom: 2px solid #b6b6b6;
+  padding: 20px;
+}
+footer div.navbar a {
+  margin: auto 1.4vw;
+}
+footer div.links a {
+  margin: auto 1vw;
+}
+
+footer div.morelinks {
+  text-align: left;
+  margin-left: 50px;
+}
+footer div.morelinks a::before {
+  content: "| ";
+}
+footer div.morelinks a::after {
+  content: " ";
+}
+footer div.morelinks {
+  font-size: x-small;
+}
+img.scrollUp {
+  position: fixed;
+  top: 88%;
+  left: 95%;
+}
+img.scrollUp:hover {
+  cursor: pointer;
+}
