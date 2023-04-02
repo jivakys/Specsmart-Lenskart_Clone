@@ -32,11 +32,6 @@ Advance Javascript,
 
 1.Landing Page with Mega Navbar, Footer, Sliders
 
-![My Image]("E:\Z-JIVAK\masai study material\Home Page -1.png")
-
-![My Image2]("E:\Z-JIVAK\masai study material\Home Page - 2.png")
-
 2.Sign in and Signup Page with validation functionality
 
 3.Multiple Types of Product's Pages with Filter , Sort ,Search
-![My Image3]("E:\Z-JIVAK\masai study material\Home Page - 3.png")
