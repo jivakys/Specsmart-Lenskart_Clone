@@ -16,6 +16,8 @@ productRouter.get("/", async (req, res) => {
 
 productRouter.get("/model", async (req, res) => {
   const filters = {};
+  // Apply filters based on query parameters
+
   if (req.query.shape) {
     filters.shape = { $regex: req.query.shape, $options: "i" };
   }

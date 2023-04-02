@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up & Sign In</title>
+    <link rel="stylesheet" href="../css/signup&singin.css" class="css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="signup_div">
+      <div id="signUpForm">
+        <div>
+          <h2>Create an Account</h2>
+          <i class="fa-solid fa-xmark" id="back"></i>
+        </div>
+        <form id="form">
+          <input type="text" id="firstName" placeholder="First Name*" />
+          <input type="text" id="lastName" placeholder="Last Name*" />
+          <input type="number" id="mobile" placeholder="Mobile*" />
+          <input type="email" id="email" placeholder="Email*" />
+          <input type="password" id="password" placeholder="Password*" />
+          <input type="submit" id="submit" value="Create an Account" />
+        </form>
+        <h4 class="acc">
+          Have an account ?<a href="#" id="goToSignin">Sign In</a>
+        </h4>
+      </div>
+    </div>
+
+    <div id="signup_div">
+      <div id="loginForm">
+        <img
+          src="https://static1.lenskart.com/media/desktop/img/DesignStudioIcons/DesktopLoginImage.svg"
+          alt="signin"
+        />
+        <i class="fa-solid fa-xmark" class="wrongBtn" id="loginBack"></i>
+        <div>
+          <div id="loginformData">
+            <h2>Sign In</h2>
+            <input type="email" id="login_email" placeholder="Email*" />
+            <input
+              type="password"
+              id="login_password"
+              placeholder="Password*"
+            />
+            <button id="login_Submit" onclick="onLogin()">Sign In</button>
+
+            <!-- <input type="submit" id="login_Submit" value="Sign In" /> -->
+          </div>
+          <h4>New member ?<a href="#" id="goToSignup">Create an Account</a></h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="../javascript/signup&signin.js"></script>

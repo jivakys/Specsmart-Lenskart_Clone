@@ -91,6 +91,7 @@ a {
   position: relative;
   top: 25%;
 }
+
 #signout {
   height: 15px;
   font-size: 10px;
@@ -109,6 +110,7 @@ a {
   top: 49px;
   right: 275px;
 }
+
 /* category Navbar */
 #category_container {
   display: flex;
@@ -310,7 +312,12 @@ div.category {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-a .bookapt {
+
+.solutions img {
+  width: 47%;
+  display: inline-block;
+}
+a.bookapt {
   padding: 15px;
   border: none;
   color: white;
