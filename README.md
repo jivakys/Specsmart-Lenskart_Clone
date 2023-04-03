@@ -1,4 +1,4 @@
-# Lensekart-Clone - devilish-tax-7135 
+# Lenskart-Clone - devilish-tax-7135 
 
 This is a construct week project of cloning https://www.lenskart.com/ that is built in 4 days .
 
@@ -10,9 +10,9 @@ https://celadon-dusk-6cc7f0.netlify.app/
 
 https://kind-ruby-marlin-wrap.cyclic.app/
 
-## AIM-
+## About-
 
-Lenscart Is the Leading E-Commerce Portal For Eyewear In India to provide designer glasses at lower cost.
+Lenskart Is the Leading E-Commerce Portal For Eyewear In India to provide designer glasses at lower cost.
 
 ## Tech Stacks Used-
 
@@ -34,4 +34,4 @@ Advance Javascript,
 
 2.Sign in and Signup Page with validation functionality
 
-3.Multiple Types of Product's Pages with Filter , Sort ,Search
+3.Multiple Types of Product's Pages with Filter, Sort, Search
