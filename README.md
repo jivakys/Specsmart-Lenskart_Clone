@@ -1,4 +1,4 @@
-# Lenskart-Clone - devilish-tax-7135 
+# Specmart - Lenskart-Clone
 
 This is a construct week project of cloning https://www.lenskart.com/ that is built in 4 days .
 
