@@ -1,4 +1,6 @@
-let url = `http://localhost:9900/products/`;
+
+let url = `https://kind-ruby-marlin-wrap.cyclic.app/products/`;
+
 let postData = document.getElementById("results");
 let totalProductList = document.getElementById("totalPro");
 let products = [];
@@ -71,12 +73,17 @@ const addCardInList = (data) => {
 
 function getFilterproduct(filterBy, byValue) {
   console.log(filterBy, byValue);
-  getproduct(`http://localhost:9900/products/model?${filterBy}=${byValue}`);
+  getproduct(
+    `https://kind-ruby-marlin-wrap.cyclic.app/products/model?${filterBy}=${byValue}`
+  );
+
 }
 
 function getSortProduct(byValue) {
   console.log(byValue);
-  getproduct(`http://localhost:9900/products/sorting?sort=${byValue}`);
+  getproduct(
+    `https://kind-ruby-marlin-wrap.cyclic.app/products/sorting?sort=${byValue}`
+  );
 }
 
 function displayData(data) {

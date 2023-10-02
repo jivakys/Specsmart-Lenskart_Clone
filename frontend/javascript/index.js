@@ -31,12 +31,22 @@ function showSlide(n) {
     slides[i].classList.remove("active");
   }
   slideIndex = (n + slides.length) % slides.length;
+  // hide all slides
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
+  }
+
+  // set slideIndex within bounds
+  slideIndex = (n + slides.length) % slides.length;
+
+  // show current slide
   slides[slideIndex].classList.add("active");
 }
 
 function nextSlide() {
   showSlide(slideIndex + 1);
 }
+
 function prevSlide() {
   showSlide(slideIndex - 1);
 }
@@ -99,6 +109,34 @@ function goToProduct() {
     window.location.href = "signup.html";
   }
 }
+function prevSlide() {
+  showSlide(slideIndex - 1);
+}
+
+// show first slide initially
+showSlide(slideIndex);
+
+// handle next and prev button clicks
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+
+setInterval(nextSlide, 3000);
+// .............Slide Show End.....................................//
+
+// SignUp Name Change //
+let signBtn_Name = document.getElementById("inOut");
+if (token == "") {
+  signBtn_Name.innerText = "Sign In & Sign Up";
+} else {
+  // fetch()
+}
+
+// set interval for auto slideshow
+setInterval(nextSlide, 3000);
+
+// .............Slide Show End.....................................//
+
 // Eyeglasses Corousel.........................//
 
 let corousel_slideIndex = 0;
@@ -206,6 +244,7 @@ suncorousel_nextBtn.addEventListener("click", () => {
 });
 
 //  ..............  Power blu lenses ..................... //
+
 let lenses_slideIndex = 0;
 const lenses_slides = document.querySelectorAll(".blu_slideshow img");
 const lenses_prevBtn = document.querySelector(".previous2");
