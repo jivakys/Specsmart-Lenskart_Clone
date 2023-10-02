@@ -1,11 +1,9 @@
 
 let url = `https://kind-ruby-marlin-wrap.cyclic.app/products/`;
-// let url = `http://localhost:9900/products/`;
-// let url = `http://localhost:9900/products/sorting?sort=hightolow`;
-
 
 let postData = document.getElementById("results");
 let totalProductList = document.getElementById("totalPro");
+let products = [];
 function getproduct(url) {
   fetch(url, {
     method: "GET",
@@ -16,34 +14,76 @@ function getproduct(url) {
   })
     .then((res) => res.json())
     .then((res) => {
-      //   console.log(res);
+      // console.log("res = ", res);
+      products = res;
       totalProductList.innerText = res.length;
       postData = document.getElementById("results");
       let arr = res;
       let disp = displayData(arr);
       postData.innerHTML = disp;
+      // passCardData
+      var elements = document.getElementsByClassName("addToCart");
+      // console.log("elements =", elements);
+      var myFunction = function () {
+        var attribute = this.getAttribute("id");
+        // console.log("attribute =", attribute);
+        const carddata = arr.filter((item) => {
+          return attribute == item._id;
+        });
+        // console.log("carddata =", carddata[0]);
+        addCardInList(carddata[0]);
+      };
+
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("click", myFunction, false);
+      }
     })
     .catch((err) => console.log(err));
 }
 getproduct(url);
 
+const addCardInList = (data) => {
+  console.log(data);
+  const token = localStorage.getItem("token");
+
+  let tokenData = token.split(".")[1];
+  let decodedTokenData = atob(tokenData);
+  let userData = JSON.parse(decodedTokenData);
+  // console.log("userData =", userData);
+
+  fetch(`http://localhost:9900/cart/addCard`, {
+    method: "POST",
+    headers: {
+      "Content-type": "application/json",
+      authorization: localStorage.getItem("token"),
+    },
+    body: JSON.stringify({
+      ...data,
+      userId: userData.userId,
+    }),
+  })
+    .then((res) => res.json())
+    .then((res) => {
+      // console.log(res);
+      swal("Product added to Cart!", "successful", "success");
+      // alert("Product added to Cart");
+    })
+    .catch((err) => console.log(err));
+};
+
 function getFilterproduct(filterBy, byValue) {
   console.log(filterBy, byValue);
-
   getproduct(
     `https://kind-ruby-marlin-wrap.cyclic.app/products/model?${filterBy}=${byValue}`
   );
 
-  getproduct(`http://localhost:9900/products/model?${filterBy}=${byValue}`);
 }
 
 function getSortProduct(byValue) {
   console.log(byValue);
-
   getproduct(
     `https://kind-ruby-marlin-wrap.cyclic.app/products/sorting?sort=${byValue}`
   );
-  getproduct(`http://localhost:9900/products/sorting?sort=${byValue}`);
 }
 
 function displayData(data) {
@@ -65,28 +105,21 @@ function displayData(data) {
       </div>
       <div class="pOffer">
       <span class="offer_1">BUY 1 GET 1</span>
-      <button class="addToCart" id="addToCart">Add To Cart</button>
+      <button class="addToCart" id="${ele._id}">Add To Cart</button>
       </div>
-    </div>
-      
+    </div> 
       `;
   });
   return ans.join("");
 }
 
-// Checkbox...........
 function clearPrevious(checkbox) {
-  // get all checkboxes
   const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  // loop through all checkboxes
   for (let i = 0; i < checkboxes.length; i++) {
-    // if checkbox is checked
     if (checkboxes[i].checked) {
-      // uncheck previous checkbox
       if (i > 0) {
         checkboxes[i - 1].checked = false;
       }
-      // break out of loop
       break;
     }
   }

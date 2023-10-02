@@ -1,7 +1,6 @@
 // REGISTER USER //
 
 let url = `https://kind-ruby-marlin-wrap.cyclic.app/users/register`;
-//let url = `http://localhost:9900/users/register`;
 
 let form = document.getElementById("form");
 let signUpForm = document.getElementById("signUpForm");
@@ -38,7 +37,8 @@ function onSign() {
     .then((res) => res.json())
     .then((res) => {
       console.log(res);
-      alert("User Registered Successfully");
+      swal("Good job!", "User Registered Successfully", "success");
+      // alert("User Registered Successfully");
       signUpForm.style.display = "none";
       loginForm.style.display = "block";
     })
@@ -67,13 +67,18 @@ const onLogin = () => {
       // console.log("res=", res.token, res);
       localStorage.setItem("token", JSON.stringify(res.token));
       localStorage.setItem("firstname", res.firstname);
-      alert("Login Successfully!...");
+      // alert("Login Successfully!...");
+      // swal("Good job!", "Login Successfully!...", "success");
+      swal({
+        title: "Good job!",
+        text: "Login Successfully!...",
+        icon: "success",
+      });
       window.location.href = "index.html";
 
     })
     .catch((err) => {
-      console.log(err);
-      alert({ error: err.message });
+      alert(err);
     });
 };
 

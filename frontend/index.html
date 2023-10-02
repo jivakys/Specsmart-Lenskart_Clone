@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
-    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -33,10 +33,11 @@
           <!-- <p>Contact Us</p> -->
         </div>
       </div>
+
       <div id="midNavbar">
         <div class="specsLogo">
           <a href="index.html"
-            ><img src="../images/specsmart-low-resolution-color-logo.png"
+            ><img src="./images/specsmart-low-resolution-color-logo.png"
           /></a>
           <img
             src="https://static.lenskart.com/media/mobile/images/phone_number.svg"
@@ -50,18 +51,23 @@
             src="https://img.icons8.com/pastel-glyph/30/000000/search--v2.png"
           />
         </div>
+
+        <!-- OPEN MENU -->
+        <div class="openMenu"><i class="fa fa-bars"></i></div>
+
         <div class="signInLinks">
           <a href="#">Track Order</a>
           <b id="inOut"><a href="signup.html">Sign In & Sign Up</a></b>
           <div id="signout"><h3 onclick="signOut()">Sign Out</h3></div>
           <a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a>
-          <a href="#"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i> Cart</a>
         </div>
       </div>
+
       <div id="category_container">
         <div class="allCategorybox">
           <div class="categories">
-            <ul>
+            <ul class="categoriesul">
               <li class="categoryName">EYEGLASSES</li>
               <li class="categoryName">COMPUTER GLASSES</li>
               <li class="categoryName">KIDS GLASSES</li>
@@ -84,6 +90,9 @@
           </div>
         </div>
       </div>
+
+      <div class="closeMenu"><i class="fa fa-times"></i></div>
+
       <div class="boxDropdown">
         <div class="eyeglasses">
           <div class="gender">
@@ -675,7 +684,7 @@
     <!-- /* AS SEEN ON SHARK TANK **************/ -->
     <div class="as-seen-on-shark-tank">
       <div>
-        <img src="../images/as seenon shark tank.png" alt="" />
+        <img src="./images/as seenon shark tank.png" alt="" />
       </div>
       <div>
         <img
@@ -688,7 +697,7 @@
     <!-- AS SEEN ON KARAN******************** -->
     <div class="as-seen-on-karan">
       <div>
-        <img src="../images/as seen on karan johar.png" alt="" />
+        <img src="./images/as seen on karan johar.png" alt="" />
       </div>
 
       <div>
@@ -702,7 +711,7 @@
     <!-- /* TRENDING GLASSES***************** */ -->
     <div class="trending-sunglasses">
       <div>
-        <img src="../images/trending sunglasses.png" alt="" />
+        <img src="./images/trending sunglasses.png" alt="" />
       </div>
 
       <div>
@@ -716,11 +725,12 @@
     <!-- Aquacolor - Glam Up With Color Lenses****************************** -->
     <div class="glam-up">
       <div>
-        <img src="../images/glam up.png" alt="" />
+        <img src="./images/glam up.png" alt="" />
       </div>
 
       <div>
         <img
+          class="kiara"
           src="https://static1.lenskart.com/media/desktop/img/Oct22/kiara/Refresh-Banner-Web.gif"
           alt=""
         />
@@ -729,7 +739,7 @@
     <!-- BUY IT YOUR WAY***************** -->
     <div class="buy-it">
       <div class="first-img">
-        <img src="../images/buy it your way.png" alt="" />
+        <img src="./images/buy it your way.png" alt="" />
       </div>
       <div class="buy-your">
         <div>
@@ -1009,3 +1019,4 @@
 </html>
 
 <script src="./javascript/index.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

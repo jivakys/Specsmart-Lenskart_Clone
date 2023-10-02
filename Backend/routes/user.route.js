@@ -4,6 +4,7 @@ const { UserModel } = require("../models/user.model");
 const userRoute = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const swal = require("sweetalert");
 
 userRoute.post("/register", userPresent, async (req, res) => {
   const { firstname, lastname, mobile, email, password } = req.body;
@@ -17,6 +18,7 @@ userRoute.post("/register", userPresent, async (req, res) => {
         password: hash,
       });
       await data.save();
+      swal("User Register Successfully!");
       res.status(200).send({ msg: "User Register Successfully" });
     });
   } catch (err) {
