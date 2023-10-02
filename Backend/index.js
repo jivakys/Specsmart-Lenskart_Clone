@@ -3,15 +3,14 @@ const { connection } = require("./configs/db.config");
 const cors = require("cors");
 const { userRoute } = require("./routes/user.route");
 const { productRouter } = require("./routes/product.route");
-// const { auth } = require("./middleware/user.middleware");
+const { cartRouter } = require("./routes/cart.route");
 const app = express();
 app.use(express.json());
 app.use(cors());
 require("dotenv").config();
-
 app.use("/users", userRoute);
-// app.use(auth);
 app.use("/products", productRouter);
+app.use("/cart", cartRouter);
 
 app.listen(process.env.port, async () => {
   try {

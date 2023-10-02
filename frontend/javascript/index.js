@@ -63,14 +63,19 @@ function checkLoginOrNot() {
     myDiv.style.visibility = "visible";
   } else {
     console.log("else run...");
-    window.location.href = "../html/signup.html";
+    window.location.href = "signup.html";
     // debugger;
   }
 }
 
 function signOut() {
   const myDiv = document.getElementById("signout");
-  console.log("sign out work");
+  swal({
+    title: "Log Out",
+    text: "Log Out Successful!",
+    icon: "success",
+  });
+  // console.log("sign out work");
   localStorage.setItem("token", "");
   localStorage.setItem("firstname", "");
   myDiv.style.visibility = "hidden";
@@ -304,3 +309,29 @@ zeroPower_nextBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// responsive navbar
+
+const mainMenu = document.querySelector(".signInLinks");
+const closeMenu = document.querySelector(".closeMenu");
+const openMenu = document.querySelector(".openMenu");
+const menu_items = document.querySelectorAll("nav .mainMenu li a");
+
+openMenu.addEventListener("click", show);
+closeMenu.addEventListener("click", close);
+
+// close menu when you click on a menu item
+menu_items.forEach((item) => {
+  item.addEventListener("click", function () {
+    close();
+  });
+});
+
+function show() {
+  mainMenu.style.display = "flex";
+  mainMenu.style.top = "0";
+}
+function close() {
+  mainMenu.style.top = "-100%";
+  mainMenu.style.display = "none";
+}
