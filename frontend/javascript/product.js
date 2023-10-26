@@ -1,5 +1,4 @@
-
-let url = `https://kind-ruby-marlin-wrap.cyclic.app/products/`;
+let url = `https://tiny-erin-adder-cuff.cyclic.app/products/`;
 
 let postData = document.getElementById("results");
 let totalProductList = document.getElementById("totalPro");
@@ -14,23 +13,18 @@ function getproduct(url) {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log("res = ", res);
       products = res;
       totalProductList.innerText = res.length;
       postData = document.getElementById("results");
       let arr = res;
       let disp = displayData(arr);
       postData.innerHTML = disp;
-      // passCardData
       var elements = document.getElementsByClassName("addToCart");
-      // console.log("elements =", elements);
       var myFunction = function () {
         var attribute = this.getAttribute("id");
-        // console.log("attribute =", attribute);
         const carddata = arr.filter((item) => {
           return attribute == item._id;
         });
-        // console.log("carddata =", carddata[0]);
         addCardInList(carddata[0]);
       };
 
@@ -49,9 +43,8 @@ const addCardInList = (data) => {
   let tokenData = token.split(".")[1];
   let decodedTokenData = atob(tokenData);
   let userData = JSON.parse(decodedTokenData);
-  // console.log("userData =", userData);
 
-  fetch(`http://localhost:9900/cart/addCard`, {
+  fetch(`https://tiny-erin-adder-cuff.cyclic.app/cart/addCard`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -64,9 +57,7 @@ const addCardInList = (data) => {
   })
     .then((res) => res.json())
     .then((res) => {
-      // console.log(res);
       swal("Product added to Cart!", "successful", "success");
-      // alert("Product added to Cart");
     })
     .catch((err) => console.log(err));
 };
@@ -74,15 +65,14 @@ const addCardInList = (data) => {
 function getFilterproduct(filterBy, byValue) {
   console.log(filterBy, byValue);
   getproduct(
-    `https://kind-ruby-marlin-wrap.cyclic.app/products/model?${filterBy}=${byValue}`
+    `https://tiny-erin-adder-cuff.cyclic.app/products/model?${filterBy}=${byValue}`
   );
-
 }
 
 function getSortProduct(byValue) {
   console.log(byValue);
   getproduct(
-    `https://kind-ruby-marlin-wrap.cyclic.app/products/sorting?sort=${byValue}`
+    `https://tiny-erin-adder-cuff.cyclic.app/products/sorting?sort=${byValue}`
   );
 }
 
@@ -124,7 +114,7 @@ function clearPrevious(checkbox) {
     }
   }
 }
-// Sorting By Various Method
+
 const mySelect = document.getElementById("select");
 mySelect.addEventListener("change", function () {
   const selectedOption = this.value;

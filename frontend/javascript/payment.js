@@ -1,11 +1,9 @@
 let total_amt = localStorage.getItem("total_amt");
-// console.log("tt=", total_amt);
 let pay_amount = document.getElementById("total");
 pay_amount.innerText = total_amt;
 var paymentBtn = document.getElementById("paymentBtn");
 
-let url = `http://localhost:9900/cart/show`;
-// let postData = document.getElementById("shadow");
+let url = `https://tiny-erin-adder-cuff.cyclic.app/cart/show`;
 let totalProductList = document.getElementById("tlp");
 let products = [];
 let cardArray = [];
@@ -42,7 +40,6 @@ getproduct(url);
 
 paymentBtn.addEventListener("click", () => {
   let cardNumber = document.getElementById("card_number").value;
-  //   console.log("cd=", cardNumber);
   let cvv = document.getElementById("cvv").value;
   if (cardNumber.length !== 16) {
     swal({
