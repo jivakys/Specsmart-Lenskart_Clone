@@ -1,5 +1,4 @@
-let url = `http://localhost:9900/cart/show`;
-// let postData = document.getElementById("shadow");
+let url = `https://tiny-erin-adder-cuff.cyclic.app/cart/show`;
 let totalProductList = document.getElementById("tlp");
 let products = [];
 let cardArray = [];
@@ -35,7 +34,6 @@ function getproduct(url) {
 getproduct(url);
 
 function changePrice(id, type) {
-  //   console.log("id==", id);
   cardArray = cardArray.map((item) => {
     if (item._id === id) {
       return {

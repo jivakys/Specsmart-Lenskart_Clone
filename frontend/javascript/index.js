@@ -31,15 +31,10 @@ function showSlide(n) {
     slides[i].classList.remove("active");
   }
   slideIndex = (n + slides.length) % slides.length;
-  // hide all slides
   for (let i = 0; i < slides.length; i++) {
     slides[i].classList.remove("active");
   }
-
-  // set slideIndex within bounds
   slideIndex = (n + slides.length) % slides.length;
-
-  // show current slide
   slides[slideIndex].classList.add("active");
 }
 
@@ -50,12 +45,11 @@ function nextSlide() {
 function prevSlide() {
   showSlide(slideIndex - 1);
 }
-// show first slide initially
 showSlide(slideIndex);
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
-setInterval(nextSlide, 3000);
+setInterval(nextSlide, 2000);
 // .............Slide Show End.....................................//
 
 // log in or not check
@@ -67,14 +61,13 @@ myinOut.addEventListener("click", () => {
 
 function checkLoginOrNot() {
   if (localStorage.getItem("token").length > 10) {
-    console.log("if run...");
+    // console.log("if run...");
     const myDiv = document.getElementById("signout");
-    console.log("myDiv =", myDiv);
+    // console.log("myDiv =", myDiv);
     myDiv.style.visibility = "visible";
   } else {
-    console.log("else run...");
+    // console.log("else run...");
     window.location.href = "signup.html";
-    // debugger;
   }
 }
 
@@ -95,6 +88,9 @@ function signOut() {
 // SignUp Name Change //
 let signBtn_Name = document.getElementById("inOut");
 let firstname = localStorage.getItem("firstname");
+if (token == "") {
+  signBtn_Name.innerText = "Sign In & Sign Up";
+}
 if (localStorage.getItem("token").length > 10) {
   signBtn_Name.innerText = firstname;
 } else {
@@ -113,28 +109,13 @@ function prevSlide() {
   showSlide(slideIndex - 1);
 }
 
-// show first slide initially
 showSlide(slideIndex);
 
 // handle next and prev button clicks
 nextBtn.addEventListener("click", nextSlide);
 prevBtn.addEventListener("click", prevSlide);
 
-
 setInterval(nextSlide, 3000);
-// .............Slide Show End.....................................//
-
-// SignUp Name Change //
-let signBtn_Name = document.getElementById("inOut");
-if (token == "") {
-  signBtn_Name.innerText = "Sign In & Sign Up";
-} else {
-  // fetch()
-}
-
-// set interval for auto slideshow
-setInterval(nextSlide, 3000);
-
 // .............Slide Show End.....................................//
 
 // Eyeglasses Corousel.........................//
