@@ -4,7 +4,7 @@ This is a construct week project of cloning https://www.lenskart.com/ that is bu
 
 ## Vercel Frontend Deployed link
 
-https://celadon-dusk-6cc7f0.netlify.app/
+https://specsmart.vercel.app/
 
 ## Cyclic Backend Deployed link
 
