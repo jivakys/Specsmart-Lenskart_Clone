@@ -1,5 +1,17 @@
 let url = `https://tiny-erin-adder-cuff.cyclic.app/products/`;
 
+// SignUp Name Change //
+let signBtn_Name = document.getElementById("inOut");
+let firstname = localStorage.getItem("firstname");
+if (localStorage.getItem("token") == "") {
+  signBtn_Name.innerText = "Sign In & Sign Up";
+}
+if (localStorage.getItem("token").length > 10) {
+  signBtn_Name.innerText = firstname;
+} else {
+  signBtn_Name.innerText = "Sign In & Sign up";
+}
+
 let postData = document.getElementById("results");
 let totalProductList = document.getElementById("totalPro");
 let products = [];
@@ -28,7 +40,7 @@ function getproduct(url) {
         addCardInList(carddata[0]);
       };
 
-      for (var i = 0; i < elements.length; i++) {
+      for (let i = 0; i < elements.length; i++) {
         elements[i].addEventListener("click", myFunction, false);
       }
     })
