@@ -17,7 +17,7 @@ function User(f, l, m, e, p) {
   this.email = e;
   this.password = p;
 }
-function onSign() {
+function onSign(event) {
   event.preventDefault();
 
   let firstname = document.getElementById("firstName").value;

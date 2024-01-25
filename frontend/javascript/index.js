@@ -61,12 +61,9 @@ myinOut.addEventListener("click", () => {
 
 function checkLoginOrNot() {
   if (localStorage.getItem("token").length > 10) {
-    // console.log("if run...");
     const myDiv = document.getElementById("signout");
-    // console.log("myDiv =", myDiv);
     myDiv.style.visibility = "visible";
   } else {
-    // console.log("else run...");
     window.location.href = "signup.html";
   }
 }
@@ -78,7 +75,6 @@ function signOut() {
     text: "Log Out Successful!",
     icon: "success",
   });
-  // console.log("sign out work");
   localStorage.setItem("token", "");
   localStorage.setItem("firstname", "");
   myDiv.style.visibility = "hidden";
@@ -88,7 +84,7 @@ function signOut() {
 // SignUp Name Change //
 let signBtn_Name = document.getElementById("inOut");
 let firstname = localStorage.getItem("firstname");
-if (token == "") {
+if (localStorage.getItem("token") == "") {
   signBtn_Name.innerText = "Sign In & Sign Up";
 }
 if (localStorage.getItem("token").length > 10) {
