@@ -85,7 +85,7 @@ function signOut() {
 let signBtn_Name = document.getElementById("inOut");
 let firstname = localStorage.getItem("firstname");
 if (localStorage.getItem("token") == "") {
-  signBtn_Name.innerText = "Sign In & Sign Up";
+  signBtn_Name.innerText = "Sign In";
 }
 if (localStorage.getItem("token").length > 10) {
   signBtn_Name.innerText = firstname;
