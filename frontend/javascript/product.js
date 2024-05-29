@@ -1,4 +1,4 @@
-let url = `https://tiny-erin-adder-cuff.cyclic.app/products/`;
+let url = `https://specsmart-backend.onrender.com/products/`;
 
 // SignUp Name Change //
 let signBtn_Name = document.getElementById("inOut");

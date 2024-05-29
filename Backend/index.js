@@ -11,7 +11,6 @@ require("dotenv").config();
 app.use("/users", userRoute);
 app.use("/products", productRouter);
 app.use("/cart", cartRouter);
-
 app.listen(process.env.port, async () => {
   try {
     await connection;

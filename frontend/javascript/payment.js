@@ -3,7 +3,7 @@ let pay_amount = document.getElementById("total");
 pay_amount.innerText = total_amt;
 var paymentBtn = document.getElementById("paymentBtn");
 
-let url = `https://tiny-erin-adder-cuff.cyclic.app/cart/show`;
+let url = `https://specsmart-backend.onrender.com/cart/show`;
 let totalProductList = document.getElementById("tlp");
 let products = [];
 let cardArray = [];

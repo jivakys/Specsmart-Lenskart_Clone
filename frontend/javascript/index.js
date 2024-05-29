@@ -52,6 +52,18 @@ prevBtn.addEventListener("click", prevSlide);
 setInterval(nextSlide, 2000);
 // .............Slide Show End.....................................//
 
+// SignUp Name Change //
+// let signBtn_Name = document.getElementById("inOut");
+// let firstname = localStorage.getItem("firstname");
+// if (localStorage.getItem("token") == "") {
+//   signBtn_Name.innerText = "Sign In";
+// }
+// if (localStorage.getItem("token").length > 10) {
+//   signBtn_Name.innerText = firstname;
+// } else {
+//   signBtn_Name.innerText = "Sign In";
+// }
+
 // log in or not check
 let myinOut = document.getElementById("inOut");
 myinOut.addEventListener("click", () => {
@@ -79,18 +91,6 @@ function signOut() {
   localStorage.setItem("firstname", "");
   myDiv.style.visibility = "hidden";
   location.reload();
-}
-
-// SignUp Name Change //
-let signBtn_Name = document.getElementById("inOut");
-let firstname = localStorage.getItem("firstname");
-if (localStorage.getItem("token") == "") {
-  signBtn_Name.innerText = "Sign In";
-}
-if (localStorage.getItem("token").length > 10) {
-  signBtn_Name.innerText = firstname;
-} else {
-  signBtn_Name.innerText = "Sign In & Sign up";
 }
 
 function goToProduct() {
@@ -325,8 +325,6 @@ zeroPower_nextBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
-
-// responsive navbar
 
 const mainMenu = document.querySelector(".signInLinks");
 const closeMenu = document.querySelector(".closeMenu");
