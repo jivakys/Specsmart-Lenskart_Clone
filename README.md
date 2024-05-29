@@ -1,6 +1,6 @@
 # Specmart - Lenskart-Clone
 
-This is a construct week project of cloning https://www.lenskart.com/ that is built in 4 days .
+This is a construct week project of cloning https://www.lenskart.com/ that is built in 4 days.
 
 ## Vercel Frontend Deployed link
 
@@ -8,7 +8,7 @@ https://specsmart.vercel.app/
 
 ## Cyclic Backend Deployed link
 
-https://tiny-erin-adder-cuff.cyclic.app/
+https://specsmart-backend.onrender.com/
 
 ## About-
 
