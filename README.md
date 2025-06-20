@@ -6,7 +6,7 @@ This is a construct week project of cloning https://www.lenskart.com/ that is bu
 
 https://specsmart.vercel.app/
 
-## Cyclic Backend Deployed link
+## Render Backend Deployed link
 
 https://specsmart-backend.onrender.com/
 
