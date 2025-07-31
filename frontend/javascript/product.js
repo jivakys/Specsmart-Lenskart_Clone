@@ -56,7 +56,7 @@ const addCardInList = (data) => {
   let decodedTokenData = atob(tokenData);
   let userData = JSON.parse(decodedTokenData);
 
-  fetch(`https://tiny-erin-adder-cuff.cyclic.app/cart/addCard`, {
+  fetch(`https://specsmart-backend.onrender.com/cart/addCard`, {
     method: "POST",
     headers: {
       "Content-type": "application/json",
@@ -77,14 +77,14 @@ const addCardInList = (data) => {
 function getFilterproduct(filterBy, byValue) {
   console.log(filterBy, byValue);
   getproduct(
-    `https://tiny-erin-adder-cuff.cyclic.app/products/model?${filterBy}=${byValue}`
+    `https://specsmart-backend.onrender.com/products/model?${filterBy}=${byValue}`
   );
 }
 
 function getSortProduct(byValue) {
   console.log(byValue);
   getproduct(
-    `https://tiny-erin-adder-cuff.cyclic.app/products/sorting?sort=${byValue}`
+    `https://specsmart-backend.onrender.com/products/sorting?sort=${byValue}`
   );
 }
 
